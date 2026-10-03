@@ -210,7 +210,7 @@ p { margin: 0; }
         if (Math.abs(i - current) < 3 || loaded === N) draw(current);
       };
       img.onerror = function () { failed++; status(); };
-      img.src = "frames/f_" + String(i + 1).padStart(4, "0") + ".webp";
+      img.src = (i < 60 ? "frames/" : "frames%202/") + "f_" + String(i + 1).padStart(4, "0") + ".webp";
       frames[i] = img;
     })(i);
   }
